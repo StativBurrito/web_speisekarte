@@ -32,7 +32,8 @@
   <title>web_speisekarte</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
+<!-- Fügt Flutter-Engine ein und lädt dann main.dart.js -->
+<script src="flutter.js" defer></script>  <!--  [oai_citation:1‡Stack Overflow](https://stackoverflow.com/questions/73070958/is-flutter-build-web-supposed-to-output-a-file-called-flutter-js-because-it-d?utm_source=chatgpt.com) -->
+<script src="main.dart.js" type="application/javascript" defer></script>
 </body>
 </html>
