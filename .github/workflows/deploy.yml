@@ -6,9 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: write   # Erlaubt Push auf normalen Code- und Pages-Branches
+  pages: write      # Erlaubt das Veröffentlichen auf GitHub Pages
+  id-token: write   # Für OIDC, wird von manchen Actions benötigt
 
 jobs:
   build-and-deploy:
@@ -21,7 +21,12 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: '3.7.2' # Pin auf deine lokale Version
+
+      - name: Validate Flutter and Dart SDK version
+        run: |
+          flutter --version
+          dart --version
 
       - name: Enable web support
         run: flutter config --enable-web
