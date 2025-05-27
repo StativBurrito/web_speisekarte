@@ -4,10 +4,7 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  # Dart-SDK (2.x) – passend zu Flutter 3.7.2
-  sdk: ">=2.19.0 <3.0.0"
-  # Flutter-SDK-Constraint (optional, aber empfohlen)
-  flutter: ">=3.7.2 <4.0.0"
+  sdk: ">=2.19.0 <4.0.0"
 
 dependencies:
   flutter:
