@@ -12,7 +12,7 @@ const RESOURCES = {
 "assets/assets/gerichte.json": "ceaac4db626937a3472f600e19347744",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/NOTICES": "7a30913b58ba326751d54d3cf81adc67",
-"main.dart.js": "360f29fde148aae2324673c36266f19c",
+"main.dart.js": "cd4a869651bca6b53e9c012d7fc07c3c",
 "manifest.json": "4c4f992d4d51885a82a2829a66d4e36f",
 "version.json": "d14721683929ca809efa7012efca6a87",
 "canvaskit/canvaskit.js": "97937cb4c2c2073c968525a3e08c86a3",

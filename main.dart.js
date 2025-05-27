@@ -59788,7 +59788,7 @@ var $async$qE=A.ab(function(a,b){if(a===1)return A.a7(b,r)
 while(true)switch(s){case 0:p=J
 o=B.aW
 s=3
-return A.an($.MV().ZQ("/gerichte.json"),$async$qE)
+return A.an($.MV().ZQ("assets/gerichte.json"),$async$qE)
 case 3:q=p.N_(o.Fk(0,b,null),new A.a5T(),t.jd).dl(0)
 s=1
 break
