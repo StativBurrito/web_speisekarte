@@ -6,9 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write   # Erlaubt Push auf normalen Code- und Pages-Branches
-  pages: write      # Erlaubt das Veröffentlichen auf GitHub Pages
-  id-token: write   # Für OIDC, wird von manchen Actions benötigt
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -21,12 +21,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.7.2' # Ensures the correct version is installed
-
-      - name: Validate Flutter and Dart SDK version
-        run: |
-          flutter --version
-          dart --version
+          flutter-version: 'stable'
 
       - name: Enable web support
         run: flutter config --enable-web
@@ -35,7 +30,10 @@ jobs:
         run: flutter pub get
 
       - name: Build web
-        run: flutter build web --release --base-href "/web_speisekarte/"
+        run: flutter build web --release
+
+      - name: Disable Jekyll
+        run: touch build/web/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -43,3 +41,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build/web
+          not_jekyll: true
