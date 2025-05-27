@@ -16,7 +16,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.0' # Replace with the desired version
+          flutter-version: '3.7.2' # Updated to match Dart SDK requirements
 
       - name: Enable web support
         run: flutter config --enable-web
