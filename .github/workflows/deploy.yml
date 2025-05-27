@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write   # Erlaubt Push auf normalen Code- und Pages-Branches
+  pages: write      # Erlaubt das Veröffentlichen auf GitHub Pages
+  id-token: write   # Für OIDC, wird von manchen Actions benötigt
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
