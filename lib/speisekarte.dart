@@ -58,7 +58,7 @@ class _SpeisekarteState extends State<Speisekarte> {
   }
 
   Future<List<MenuItem>> loadMenuItems() async {
-    final raw = await rootBundle.loadString('/gerichte.json');
+    final raw = await rootBundle.loadString('assets/gerichte.json');
     final List<dynamic> data = jsonDecode(raw);
     return data.map((e) => MenuItem.fromJson(e as JsonMap)).toList();
   }
